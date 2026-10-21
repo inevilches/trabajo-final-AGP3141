@@ -55,14 +55,14 @@ Como base, partí con una planilla excel donde yo asigné las columnas y la base
 | date-week | Semana de producción | 1-4 |
 | date-calendar | Fecha del calendario | Desde 1 mayo 2026 a 28 febrero 2027 |
 | lettuce-number-id | ID para cada lechuga. Indica season-pool.datedat-treatment-rep |  Ej: inv-1.1-T1R1|
-| fresh-weight-root (g) | Peso fresco raíz | Indicado en el prompt |
-| dry-weight-root (g) | Peso seco raíz | Indicado en el prompt |
-| fresh-weight-leaves (g) | Peso fresco hojas | Indicado en el prompt |
-| dry-weight-leaves (g) | Peso seco hojas | Indicado en el prompt |
-| leaf-area (cm2) | Área de las hojas | Indicado en el prompt |
-| A | Fotosíntesis neta (umol Co2 m-2 s-1) | Indicado en el prompt |
-| E | Transpiración (umol H20 m-2 s-1) | Indicado en el prompt |
-| gs | Conductancia estomática (umol H2O m-2 s-1) | Indicado en el prompt |
+| fresh-weight_root_g | Peso fresco raíz | Indicado en el prompt |
+| dry-weight_root_g | Peso seco raíz | Indicado en el prompt |
+| fresh-weight_leaves_g | Peso fresco hojas | Indicado en el prompt |
+| dry-weight_leaves_g | Peso seco hojas | Indicado en el prompt |
+| leaf-area_leaves_cm2 | Área de las hojas | Indicado en el prompt |
+| A_leaves_umol-m2-s1 | Fotosíntesis neta (umol Co2 m-2 s-1) | Indicado en el prompt |
+| E_leaves_umol-m2-s1 | Transpiración (umol H20 m-2 s-1) | Indicado en el prompt |
+| gs_leaves_umol-m2-s1 | Conductancia estomática (umol H2O m-2 s-1) | Indicado en el prompt |
 
 **Para los datos "Indicado en el prompt", esto fue lo indicado a Chat GPT:**
 
@@ -74,17 +74,17 @@ Como base, partí con una planilla excel donde yo asigné las columnas y la base
 
    *-Los datos están agrupados para las piscinas o "pool" de la 1 a la 8. Cada piscina tiene 28 datos, 1 por cada día calendario. El orden de los datos va desde la piscina 1, temporada invierno, tratamiento 1 y repetición 1 con sus 28 días para luego seguir con las piscinas desde la 2 a la 8. Posteriormente, sigue con la temporada invierno, tratamiento 1 y repetición 2, luego tratamiento 2, repetición 1 y tratamiento 2 rep 2; luego temporada verano, tratamiento 1, repetición 1, temporada verano, tratamiento 1, repetición 2, temporada verano, tratamiento 2, rep 1 y finalmente temporada verano, tratamiento 2, rep 2.*
    
-  *-Para rellenar la columna de **fresh-weight-leaves**, este valor va progresivamente aumentando desde el día 1 hasta el 28. El mínimo valor que podemos obtener de las lechugas en el día 1 va en 15,02 g y el máximo en el día 28 llega a 158,89 g en invierno y 236,68 en verano.*
+  *-Para rellenar la columna de **fresh-weight_leaves_g**, este valor va progresivamente aumentando desde el día 1 hasta el 28. El mínimo valor que podemos obtener de las lechugas en el día 1 va en 15,02 g y el máximo en el día 28 llega a 158,89 g en invierno y 236,68 en verano.*
   
-*-Para rellenar la columna de **dry-weight leaves**, este valor va progresivamente aumentando desde el día 1 hasta el 28. El mínimo valor que podemos obtener de las lechugas en el día 1 va en 0,71 g y el máximo en el día 28 llega a 7,13 g en invierno y 10,29 en verano.*
+*-Para rellenar la columna de **dry-weight_leaves_g**, este valor va progresivamente aumentando desde el día 1 hasta el 28. El mínimo valor que podemos obtener de las lechugas en el día 1 va en 0,71 g y el máximo en el día 28 llega a 7,13 g en invierno y 10,29 en verano.*
 
-  *-Para rellenar la columna de **área foliar**, este valor va progresivamente aumentando desde el día 1 hasta el 28. El mínimo valor que podemos obtener de las lechugas en el día 1 va en 0,08 g y el máximo en el día 28 llega a 210,34 g en invierno y 245,81 en verano.*
+  *-Para rellenar la columna de **leaf-area_leaves_cm2**, este valor va progresivamente aumentando desde el día 1 hasta el 28. El mínimo valor que podemos obtener de las lechugas en el día 1 va en 0,08 g y el máximo en el día 28 llega a 210,34 g en invierno y 245,81 en verano.*
 
 *Luego, agrega los datos para:*
 
-*-**fresh-weight root**: el valor mínimo es 2,34 en invierno y 3,98 en verano; el valor máximo es 20,6 en invierno y 25,89 en verano.*
+*-**fresh-weight_root_g**: el valor mínimo es 2,34 en invierno y 3,98 en verano; el valor máximo es 20,6 en invierno y 25,89 en verano.*
 
-*-**dry weight root**: el valor mínimo es 0,08 en invierno y 0,16 en verano; el valor máximo es 0,9 en invierno y 1,22 en verano.*
+*-**dry-weight_root_g**: el valor mínimo es 0,08 en invierno y 0,16 en verano; el valor máximo es 0,9 en invierno y 1,22 en verano.*
 
 *-Los valores de **A, E y gs** por favor asignalos tú según valores típicos de crecimiento para lechuga, considerando, además de la diferencia entre tratamientos, que en invierno los valores sean menores que en verano.*
 
@@ -104,20 +104,20 @@ La base de los datos identificatorios siguió la misma lógica de la planilla da
 | date-dat | Día después de trasplante | 1-28 |
 | date-week | Semana de producción | 1-4 |
 | date-calendar | Fecha del calendario | Desde 1 mayo 2026 a 28 febrero 2027 |
-| pool-lettuce-total (n) | Total de lechugas disponibles en la mesa para cada fecha | 42-15|
-| pool-water-volume (l) | Volumen de agua disponible en la mesa | Indicado en el prompt |
-| ph | pH de la solución nutritiva | Indicado en el prompt |
-| ce | Conductividad eléctrica de la solución nutritiva | Indicado en el prompt |
+| total-plants_pool_n | Total de lechugas disponibles en la mesa para cada fecha | 42-15|
+| ns-volume_pool_l | Volumen de agua disponible en la mesa | Indicado en el prompt |
+| ph_pool_no-unit | pH de la solución nutritiva | Indicado en el prompt |
+| ce_pool_ds-m | Conductividad eléctrica de la solución nutritiva | Indicado en el prompt |
 
-- Se debe considerar que se asumió que por cada día se cosechaba una lechuga de cada mesa, por lo que se agregó la columna "pool-lettuce-total" que identifica cuántas lechugas van quedando con el paso de los días. Cada mesa iniciaba con 42 lechugas y luego de 28 días de producción terminaba con 15 plantas.
+- Se debe considerar que se asumió que por cada día se cosechaba una lechuga de cada mesa, por lo que se agregó la columna "total-plants_pool_n" que identifica cuántas lechugas van quedando con el paso de los días. Cada mesa iniciaba con 42 lechugas y luego de 28 días de producción terminaba con 15 plantas.
 
-- Para pool-water-volume (l) se consideró que se partía con un volumen inicial de agua el que va disminuyendo con el paso de los días y no hay rellenos entremedio de la producción, solo al inicio de cada ciclo.
+- Para **ns-volume_pool_l** se consideró que se partía con un volumen inicial de agua el que va disminuyendo con el paso de los días y no hay rellenos entremedio de la producción, solo al inicio de cada ciclo.
 
 **Para los datos "Indicado en el prompt", esto fue lo indicado a Chat GPT:**
 
 *Para la hoja "water" necesito que crees los siguientes datos para estas columnas:*
 
-*-Columna **pool-water-volume**:*
+*-Columna **ns-volume_pool_l**:*
 
   *-El consumo de agua debe aumentar progresivamente desde el día 1 hasta el día 28, siguiendo el crecimiento de las lechugas indicado en la hoja "lettuce", creada anteriormente.*
   
@@ -144,16 +144,16 @@ La base de los datos identificatorios siguió la misma lógica de la planilla da
 
 ### data-raw-hobo-inside y data-raw-hobo-outside
 
-Como base, las columnas de la planilla excel son las siguientes:
+Como base, las columnas de la planilla excel son las siguientes (los datos cambiaron a hobo_in o hobo_out dependiendo de si los datos meteorológicos son medidos dentro o fuera del invernadero):
 
 | Nombre columna | Significado | Valores |
 |---|---|---|
 | N° | ID de cada entrada, en número | 1-43776 |
-| Fecha | Fecha de cada dato | Desde mayo 2026 a febrero 2027 |
-| Tiempo, GMT-04:00 | Hora de cada dato | Datos cada 10 minutos |
-| Radiación solar, umol m² s  | Dato de sensor de radiación PAR | Indicado en el prompt |
-| Temp, °C  | Dato de sensor de temperatura | Indicado en el prompt |
-| HR, %  | Dato de sensor de humedad relativa | Indicado en el prompt |
+| fecha_hobo-in_iso| Fecha de cada dato | Desde mayo 2026 a febrero 2027 |
+| tiempo_hobo-in_hora | Hora de cada dato | Datos cada 10 minutos |
+| radiacion_hobo-in_umol-m2-s1 | Dato de sensor de radiación PAR | Indicado en el prompt |
+| temperatura_hobo-in_C | Dato de sensor de temperatura | Indicado en el prompt |
+| hr_hobo-in_%  | Dato de sensor de humedad relativa | Indicado en el prompt |
 
 **Para los datos "Indicado en el prompt", esto fue lo indicado a Chat GPT:**
 
