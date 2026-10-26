@@ -34,27 +34,28 @@ Se busca aumentar la eficiencia del uso del agua en producciones de lechugas hid
 3. ¿Cómo se modifica la Eficiencia en el Uso del Agua en los distintos ambientes a medida que las lechugas crecen en el invernadero?
 
 ## Estructura del repositorio
+```
+trabajo-final-AGP3141
+├── README.md
+├── data
+│   └── data-raw
+      └── data-raw-hobo-inside.xlsx
+      └── data-raw-hobo-outside.xlsx
+      └── data-raw-lechugas.xlsx
+      └── data-raw-mesas.xlsx
+│   └── data-bibliografia
+      └── data-bibliografia-inseguridad-alimentaria.xlsx
+      └── data-bibliografia-niebla.xlsx
+      └── data-bibliografia-pib-sap.xlsx
+      └── data-bibliografia-precipitaciones.xlsx
+├── scripts
+    ├── 01-analisis-exploratorio-1.R
+    ├── 02-xxxx.R
+    └── 03-xxxx.R
+└── plot
+    └── 01-xxx.tiff
+```
 
-trabajo-final-AGP3141/
-├── data/
-│   ├── data-raw/
-│   └── data-bibliografia/
-├── scripts/
-│   └── 
-├── figures/
-│   ├── 
-│   └── 
-├── resultados
-│   ├── 
-│   ├── 
-│   ├── 
-│   ├── 
-│   └── 
-├── manuscrito/
-│   ├── 
-│   └── 
-├── 
-└── README.md
 
 ## Bibliografía
 - Albornoz, F.; del Río, C.; Carter, V.; Escobar, R.; Vásquez, L. Fog Water Collection for Local Greenhouse Vegetable Production in the Atacama Desert. Sustainability 2023, 15, 15720. https://doi.org/10.3390/su152215720
