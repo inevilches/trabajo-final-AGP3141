@@ -1,5 +1,5 @@
-# trabajo-final-AGP3141
-Repositorio para el trabajo final del curso AGP3141-1, 2do semestre 2026
+# wue-lettuce-atacama-desert
+Repositorio del análisis exploratorio de datos (simulados) de ambientes de invernadero de bajo costo en la costa del desierto de Atacama para el aumento de la eficiencia del uso del agua de lechugas producidas hidropónicamente con agua de niebla.
 
 > ## DISCLAIMER: este repositorio contiene datos que no son reales
 > Los datos contenidos en los documentos que inician como "data-raw" fueron creados con inteligencia artificial para trabajar los contenidos del curso. 
@@ -18,11 +18,38 @@ Pongámonos en el siguiente escenario.
 
 Aprovechas una pequeña ventana de la universidad para ir a comprar una ensalada para tu almuerzo. Decides pasar desde el Campus San Joaquín al Jumbo, que está a dos estaciones de metro y te ofrece una gran variedad de dónde escoger. En el pasillo de las verduras ves una estantería repleta de lechugas, todas preciosas, pero una es notoriamente más pequeña que las demás e incluso se ve algo añeja. ¿Quién compraría esa lechuga, teniendo todas las demás disponibles? 
 
+<p align="center">
+  <img src="images/01-gondola-jumbo-santiago-.JPEG" width="45%" alt="gondola-lejos">
+  <img src="images/02-gondola-jumbo-santiago2.JPEG" width="45%" alt="gondola-cerca">
+</p>
+
 Ahora te encuentras en Chañaral. No hay supermercado, por lo que para buscar tu lechuga debes ir la esquina donde "El Pino”, el caballero de las verduras, se para cada viernes junto a su camioneta con el pick-up abierto esperando a que escojas lo que quieres llevar de su selección. Ahora esa lechuga pequeña, notoriamente añeja y algo amarillenta es la mejor opción. El Pino te dice que es lo que quedó de su viaje a La Serena del lunes, después de haber vendido en Inca de Oro, Diego de Almagro y El Salado. Si quisieras otra cosa tendrías que ir al Unimarc que está en el pueblo vecino, Barquito, pero escuchaste que por un accidente en la ruta 5 no llegó la carga de la semana. 
 
 Esta es la realidad de muchas localidades del Desierto de Atacama. Las condiciones de extrema aridez no permiten el florecimiento de una agricultura local que abastezca al 7% de la población de Chile que vive allí. Así, los alimentos deben viajar desde otras localidades, pasando largas horas arriba de un camión antes de arribar a los consumidores. La fragilidad del sistema queda reflejada en la alta inseguridad alimentaria que sufre esta zona, en promedio 20,5%, a pesar de albergar las regiones de mayores ingresos dedicadas a la producción de cobre. 
 
 Pero existe una fuente de agua que no ha sido altamente considerada hasta el momento. El agua de niebla, o camanchaca, inunda por las noches la costa del desierto más árido del mundo, dejando tras su paso litros de agua que son posibles de capturar con el invento chileno donado a la UNESCO, el atrapanieblas. El proyecto Fondecyt 13220028, realizado entre 2023 y 2025, demostró que esta agua tiene condiciones de calidad aptas para la producción hidropónica. Gracias a este proyecto fue posible producir lechugas hidropónicas en invernaderos de bajo costo ubicados en dos localidades de la costa del Desierto de Atacama: Alto Patache, 70 km al sur de Iquique, y Falda Verde, Chañaral. Así, fue posible producir plantas con tan solo 3 L de agua por planta, cuando en producciones en suelo de la zona central esta cifra se mueve alrededor de los 100 L por planta.
+
+
+
+<h2>Captación de agua de niebla</h2>
+
+<table>
+  <tr>
+    <td width="60%">
+      <img src="plot/02-grafico-niebla-comparativo.png"
+           alt="Captación de agua de niebla"
+           width="100%">
+    </td>
+    <td width="40%">
+      <img src="images/05-atrapanieblas-chañaral.JPEG"
+           alt="Atrapanieblas en Chañaral"
+           width="100%">
+    </td>
+  </tr>
+</table>
+
+
+
 
 Ahora tenemos una fuente de agua que, si bien no llevará a reemplazar el sistema actual, sí puede ayudar a complementarlo y así fortalecer la seguridad alimentaria de la zona. Pero seguimos estando en una zona de alta aridez, por lo que es necesario utilizarla con gran eficiencia. Entonces, ¿cuáles son las condiciones de producción que nos pueden llevar a maximizar la cantidad de kilos producidos por litro de agua? Eso es lo que busca dilucidar esta investigación. 
 
@@ -35,25 +62,31 @@ Se busca aumentar la eficiencia del uso del agua en producciones de lechugas hid
 
 ## Estructura del repositorio
 ```
-trabajo-final-AGP3141
+wue-lettuce-atacama-desert
 ├── README.md
-├── data
-│   └── data-raw
+├── data/
+│   └── data-raw/
       └── data-raw-hobo-inside.xlsx
       └── data-raw-hobo-outside.xlsx
       └── data-raw-lechugas.xlsx
       └── data-raw-mesas.xlsx
-│   └── data-bibliografia
+│   └── data-bibliografia/
       └── data-bibliografia-inseguridad-alimentaria.xlsx
       └── data-bibliografia-niebla.xlsx
       └── data-bibliografia-pib-sap.xlsx
       └── data-bibliografia-precipitaciones.xlsx
-├── scripts
-    ├── 01-analisis-exploratorio-1.R
-    ├── 02-xxxx.R
-    └── 03-xxxx.R
-└── plot
-    └── 01-xxx.tiff
+├── scripts/
+    ├── 01-grafico-niebla.R
+    ├── 02-grafico-niebla-comparativo.R
+    └── 03-grafico-curva-crecimiento-lechugas.R
+└── plot/
+    ├── 01-grafico-niebla.png
+    ├── 02-grafico-niebla-comparativo.png
+    └── 03-curva-crecimiento-lechugas.png
+└── manuscrito/
+    ├── 01-grafico-niebla.pdf
+    ├── 02-grafico-niebla-comparativo.pdf
+    └── 03-curva-crecimiento-lechugas.pdf
 ```
 
 
