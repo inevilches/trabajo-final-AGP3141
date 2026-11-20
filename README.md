@@ -120,7 +120,7 @@ Para mi análisis de Eficiencia en el Uso del Agua, necesitaba los siguientes da
 - Consumo de agua de las lechugas (data-raw-pool).
 - Datos ambientales de invernadero (data-raw-hobo-inside y data-raw-hobo-outside)
 
-### data-raw-lettuce
+### :leafy_green: data-raw-lettuce
 Como base, partí con una planilla excel donde yo asigné las columnas y la base de los datos de identificación:
 
 | Nombre columna | Significado | Valores |
@@ -174,7 +174,7 @@ Como base, partí con una planilla excel donde yo asigné las columnas y la base
 
 *Por último, introduce algunos errores aleatorios a los datos de las mesas. Los errores se deberán a que el dato se saldrá de rango para los valores normales de una lechuga en al menos una cifra (por ejemplo, en vez de 20 gramos en una raíz, que diga 200, en vez de 200 de peso fresco de hojas, que diga 2000, etc).*
 
-### data-raw-pool
+### :droplet: data-raw-pool
 La base de los datos identificatorios siguió la misma lógica de la planilla data-raw-lechugas, solo con nuevos datos que eran exclusivos para el agua. 
 
 | Nombre columna | Significado | Valores |
@@ -228,7 +228,7 @@ La base de los datos identificatorios siguió la misma lógica de la planilla da
 *Como resultado, entrega una nueva planilla Excel con los datos completos de consumo diario de agua, manteniendo la estructura original.*
 
 
-### data-raw-hobo-inside y data-raw-hobo-outside
+### :house_with_garden: data-raw-hobo-inside y data-raw-hobo-outside
 
 Como base, las columnas de la planilla excel son las siguientes (los datos cambiaron a hobo_in o hobo_out dependiendo de si los datos meteorológicos son medidos dentro o fuera del invernadero):
 
